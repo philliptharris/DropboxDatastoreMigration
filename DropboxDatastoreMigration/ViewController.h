@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)linkTapped:(id)sender;
+- (IBAction)unlinkTapped:(id)sender;
+- (IBAction)migrateTapped:(id)sender;
+
 @end

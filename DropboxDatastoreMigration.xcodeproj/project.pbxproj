@@ -21,6 +21,13 @@
 		F4A37E6619A9C42300C864AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E4819A9C42300C864AD /* UIKit.framework */; };
 		F4A37E6E19A9C42300C864AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4A37E6C19A9C42300C864AD /* InfoPlist.strings */; };
 		F4A37E7019A9C42300C864AD /* DropboxDatastoreMigrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37E6F19A9C42300C864AD /* DropboxDatastoreMigrationTests.m */; };
+		F4A37E7A19A9C46200C864AD /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E7919A9C46200C864AD /* Dropbox.framework */; };
+		F4A37E7C19A9C48B00C864AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E7B19A9C48B00C864AD /* CFNetwork.framework */; };
+		F4A37E7E19A9C49000C864AD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E7D19A9C49000C864AD /* Security.framework */; };
+		F4A37E8019A9C49700C864AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E7F19A9C49700C864AD /* SystemConfiguration.framework */; };
+		F4A37E8219A9C4A100C864AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E8119A9C4A100C864AD /* QuartzCore.framework */; };
+		F4A37E8419A9C4B700C864AD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E8319A9C4B700C864AD /* libc++.dylib */; };
+		F4A37E8619A9C4BD00C864AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E8519A9C4BD00C864AD /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		F4A37E6B19A9C42300C864AD /* DropboxDatastoreMigrationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropboxDatastoreMigrationTests-Info.plist"; sourceTree = "<group>"; };
 		F4A37E6D19A9C42300C864AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4A37E6F19A9C42300C864AD /* DropboxDatastoreMigrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropboxDatastoreMigrationTests.m; sourceTree = "<group>"; };
+		F4A37E7919A9C46200C864AD /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		F4A37E7B19A9C48B00C864AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F4A37E7D19A9C49000C864AD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F4A37E7F19A9C49700C864AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F4A37E8119A9C4A100C864AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F4A37E8319A9C4B700C864AD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		F4A37E8519A9C4BD00C864AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +74,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A37E8619A9C4BD00C864AD /* libz.dylib in Frameworks */,
+				F4A37E8419A9C4B700C864AD /* libc++.dylib in Frameworks */,
+				F4A37E8219A9C4A100C864AD /* QuartzCore.framework in Frameworks */,
+				F4A37E8019A9C49700C864AD /* SystemConfiguration.framework in Frameworks */,
+				F4A37E7E19A9C49000C864AD /* Security.framework in Frameworks */,
+				F4A37E7C19A9C48B00C864AD /* CFNetwork.framework in Frameworks */,
 				F4A37E4719A9C42300C864AD /* CoreGraphics.framework in Frameworks */,
 				F4A37E4919A9C42300C864AD /* UIKit.framework in Frameworks */,
 				F4A37E4519A9C42300C864AD /* Foundation.framework in Frameworks */,
+				F4A37E7A19A9C46200C864AD /* Dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +122,13 @@
 		F4A37E4319A9C42300C864AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4A37E8519A9C4BD00C864AD /* libz.dylib */,
+				F4A37E8319A9C4B700C864AD /* libc++.dylib */,
+				F4A37E8119A9C4A100C864AD /* QuartzCore.framework */,
+				F4A37E7F19A9C49700C864AD /* SystemConfiguration.framework */,
+				F4A37E7D19A9C49000C864AD /* Security.framework */,
+				F4A37E7B19A9C48B00C864AD /* CFNetwork.framework */,
+				F4A37E7919A9C46200C864AD /* Dropbox.framework */,
 				F4A37E4419A9C42300C864AD /* Foundation.framework */,
 				F4A37E4619A9C42300C864AD /* CoreGraphics.framework */,
 				F4A37E4819A9C42300C864AD /* UIKit.framework */,
@@ -376,9 +404,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DropboxDatastoreMigration/DropboxDatastoreMigration-Prefix.pch";
 				INFOPLIST_FILE = "DropboxDatastoreMigration/DropboxDatastoreMigration-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,9 +422,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DropboxDatastoreMigration/DropboxDatastoreMigration-Prefix.pch";
 				INFOPLIST_FILE = "DropboxDatastoreMigration/DropboxDatastoreMigration-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

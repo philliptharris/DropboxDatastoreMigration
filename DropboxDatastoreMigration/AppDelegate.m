@@ -8,12 +8,36 @@
 
 #import "AppDelegate.h"
 
+#import <Dropbox/Dropbox.h>
+
+#define DropboxAppKey @"tz05t9q9xk2ryg0"
+#define DropboxAppSecret @"ztdcx9e3wce77t6"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    DBAccountManager *accountManager = [[DBAccountManager alloc] initWithAppKey:DropboxAppKey secret:DropboxAppSecret];
+    [DBAccountManager setSharedManager:accountManager];
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url sourceApplication:(NSString *)source annotation:(id)annotation {
+    
+    // Returns "The [account](DBAccount) object if the link was successful, or `nil` if the user cancelled."
+    DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+    
+    if (account) {
+        NSLog(@"📲 | openURL | App linked successfully!");
+        return YES;
+    }
+    else {
+        NSLog(@"📲 | openURL | user cancelled linking");
+        
+        return NO;
+    }
+    return NO;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
