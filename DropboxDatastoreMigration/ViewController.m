@@ -23,13 +23,36 @@
 {
     [super viewDidLoad];
     
+//    self.linkedDatastore = [DBDatastore openDefaultStoreForAccount:[[DBAccountManager sharedManager] linkedAccount] error:nil];
+//    [self deleteEverythingInDropbox];
+    
     // DELETE EVERYTHING STORED REMOTELY IN DROPBOX - THIS IS LIKE A RESET BUTTON TO START FRESH AND TEST AGAIN
 //    DBDatastoreManager *manager = [DBDatastoreManager managerForAccount:[[DBAccountManager sharedManager] linkedAccount]];
 //    self.linkedDatastore = [DBDatastore openDefaultStoreForAccount:[[DBAccountManager sharedManager] linkedAccount] error:nil];
 //    [self.linkedDatastore close];
-//    [manager deleteDatastore:self.linkedDatastore.datastoreId error:nil];
+//    BOOL didDeleteDatastore = [manager deleteDatastore:self.linkedDatastore.datastoreId error:nil];
+//    NSLog(@"was datastore deleted? %i", didDeleteDatastore);
 //    [[[DBAccountManager sharedManager] linkedAccount] unlink];
 //    self.linkedDatastore = nil;
+}
+
+- (void)deleteEverythingInDropbox {
+    
+    NSLog(@"=== deleteEverythingInDropbox ===");
+    
+    NSArray *tables = [self.linkedDatastore getTables:nil];
+    NSLog(@"deleting %lu tables", (unsigned long)[tables count]);
+    for (DBTable *table in tables) {
+        NSArray *records = [table query:nil error:nil];
+        NSLog(@"    deleting %lu records in table %@", (unsigned long)[records count], table.tableId);
+        for (DBRecord *record in records) {
+            [record deleteRecord];
+        }
+    }
+    DBError *error = nil;
+    NSDictionary *remoteChanges = [self.linkedDatastore sync:&error];
+    
+    NSLog(@"=== deleteEverythingInDropbox ===");
 }
 
 - (void)viewDidAppear:(BOOL)animated {
