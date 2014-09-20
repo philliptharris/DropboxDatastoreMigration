@@ -13,6 +13,9 @@
 #define DropboxAppKey @"tz05t9q9xk2ryg0"
 #define DropboxAppSecret @"ztdcx9e3wce77t6"
 
+//#define DropboxAppKey @"0584hkty5i1a7ct" // DatastoreMigration310
+//#define DropboxAppSecret @"4cxzkw10vw4z2km"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F46F7C3919CE04E800F42E12 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46F7C3819CE04E800F42E12 /* Dropbox.framework */; };
 		F4A37E4519A9C42300C864AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E4419A9C42300C864AD /* Foundation.framework */; };
 		F4A37E4719A9C42300C864AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E4619A9C42300C864AD /* CoreGraphics.framework */; };
 		F4A37E4919A9C42300C864AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E4819A9C42300C864AD /* UIKit.framework */; };
@@ -21,7 +22,6 @@
 		F4A37E6619A9C42300C864AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E4819A9C42300C864AD /* UIKit.framework */; };
 		F4A37E6E19A9C42300C864AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4A37E6C19A9C42300C864AD /* InfoPlist.strings */; };
 		F4A37E7019A9C42300C864AD /* DropboxDatastoreMigrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37E6F19A9C42300C864AD /* DropboxDatastoreMigrationTests.m */; };
-		F4A37E7A19A9C46200C864AD /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E7919A9C46200C864AD /* Dropbox.framework */; };
 		F4A37E7C19A9C48B00C864AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E7B19A9C48B00C864AD /* CFNetwork.framework */; };
 		F4A37E7E19A9C49000C864AD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E7D19A9C49000C864AD /* Security.framework */; };
 		F4A37E8019A9C49700C864AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A37E7F19A9C49700C864AD /* SystemConfiguration.framework */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F46F7C3819CE04E800F42E12 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		F4A37E4119A9C42300C864AD /* DropboxDatastoreMigration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxDatastoreMigration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A37E4419A9C42300C864AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F4A37E4619A9C42300C864AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,7 +61,6 @@
 		F4A37E6B19A9C42300C864AD /* DropboxDatastoreMigrationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropboxDatastoreMigrationTests-Info.plist"; sourceTree = "<group>"; };
 		F4A37E6D19A9C42300C864AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4A37E6F19A9C42300C864AD /* DropboxDatastoreMigrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropboxDatastoreMigrationTests.m; sourceTree = "<group>"; };
-		F4A37E7919A9C46200C864AD /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		F4A37E7B19A9C48B00C864AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F4A37E7D19A9C49000C864AD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F4A37E7F19A9C49700C864AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -81,9 +81,9 @@
 				F4A37E7E19A9C49000C864AD /* Security.framework in Frameworks */,
 				F4A37E7C19A9C48B00C864AD /* CFNetwork.framework in Frameworks */,
 				F4A37E4719A9C42300C864AD /* CoreGraphics.framework in Frameworks */,
+				F46F7C3919CE04E800F42E12 /* Dropbox.framework in Frameworks */,
 				F4A37E4919A9C42300C864AD /* UIKit.framework in Frameworks */,
 				F4A37E4519A9C42300C864AD /* Foundation.framework in Frameworks */,
-				F4A37E7A19A9C46200C864AD /* Dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,13 +122,13 @@
 		F4A37E4319A9C42300C864AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F46F7C3819CE04E800F42E12 /* Dropbox.framework */,
 				F4A37E8519A9C4BD00C864AD /* libz.dylib */,
 				F4A37E8319A9C4B700C864AD /* libc++.dylib */,
 				F4A37E8119A9C4A100C864AD /* QuartzCore.framework */,
 				F4A37E7F19A9C49700C864AD /* SystemConfiguration.framework */,
 				F4A37E7D19A9C49000C864AD /* Security.framework */,
 				F4A37E7B19A9C48B00C864AD /* CFNetwork.framework */,
-				F4A37E7919A9C46200C864AD /* Dropbox.framework */,
 				F4A37E4419A9C42300C864AD /* Foundation.framework */,
 				F4A37E4619A9C42300C864AD /* CoreGraphics.framework */,
 				F4A37E4819A9C42300C864AD /* UIKit.framework */,
@@ -494,6 +494,7 @@
 				F4A37E7519A9C42300C864AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4A37E7619A9C42300C864AD /* Build configuration list for PBXNativeTarget "DropboxDatastoreMigrationTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +503,7 @@
 				F4A37E7819A9C42300C864AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
